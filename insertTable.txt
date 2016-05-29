@@ -1,0 +1,10 @@
+
+        def insertTable(id, value):
+            self.table[id] = value
+
+        if func_node.type is TokenType.DEFINE:
+            rhs2 = self.run_expr(rhs2)
+            if rhs2.type in [TokenType.TRUE, TokenType.FALSE]:
+                insertTable(rhs1.value, rhs2)
+            else:
+                insertTable(rhs1.value, rhs2.value)
